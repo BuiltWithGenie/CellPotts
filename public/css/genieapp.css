@@ -1,0 +1,4 @@
+div > div > div.q-slider__thumb.q-slider__thumb--h.q-slider__thumb--h-ltr.absolute.non-selectable > div.q-slider__pin.q-slider__pin--h.q-slider__pin--h-standard.absolute.fit.no-pointer-events > div > div {
+    opacity: 0.5;
+    z-index: -9999;
+}

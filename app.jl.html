@@ -1,0 +1,30 @@
+<h3>Cellular Potts model</h3>
+<div class="row">
+    <div class="st-col col-12 col-sm st-module items-center justify-center">
+<div class="row">
+<st-big-number title="Cells" :number=N_cells></st-big-number>"
+<st-big-number title="Iteration" :number=t></st-big-number>"
+    </div>
+        <plotly id="iaywr" data="W3siZ2J0eXBlIjoiSGVhdG1hcCIsInoiOiIkX3tub2RlSURzfSIsInR5cGUiOiJoZWF0bWFwIiwibmFtZSI6IlRyYWNlIiwiZmlsbGNvbG9yIjoiI2ZmZmZmZiIsImNvbG9yc2NhbGUiOiJ0d2lsaWdodCIsImZpbGwiOiJ0b3plcm95In1d" config="eyJzY3JvbGxab29tIjp0cnVlfQ==" layout="eyJ0aXRsZSI6IkNlbGx1bGFyIFBvdHSgbW9kZWwiLCJwbG90X2JnY29sb3IiOiIjZmZmZmZmIiwic2hvd2xlZ2VuZCI6ZmFsc2UsIm1hcmdpbiI6eyJiIjowLCJsIjowLCJyIjowLCJ0IjoiMCJ9fQ=="></plotly>
+    </div>
+    <div id="ih6yo" class="st-col st-module col-3">
+        <q-badge id="ihx5i" label="Cell volume (px)"></q-badge>
+        <q-slider id="i5f5t" :min="100" v-model="volume" :max="500" :step="100" marker-labels :markers="true" :dense="false"></q-slider>
+        <q-badge id="i9uen" label="Number of cells"></q-badge>
+        <q-slider id="ill1i" :min="1" v-model="N" :max="3"  :step="1" marker-labels :markers="true"></q-slider>
+        <q-badge id="i8eib" label="Space size"></q-badge>
+        <q-slider id="i5bn8" :min="100" v-model="S" :max="250"  :step="50" :markers="true" marker-labels></q-slider>
+        <q-badge id="ipduj" label="Iterations"></q-badge>
+        <q-slider id="iw4sd" :min="100" v-model="iterations" :max="250"  :step="50" :markers="true" marker-labels></q-slider>
+        <q-badge id="ikh8c" label="Division interval"></q-badge>
+        <q-checkbox class="mb-5" style="scale:0.7" id="i9j8b" v-model="division"></q-checkbox>
+        <q-slider  class="-mt-10" v-if="division" id="iw4sd" :min="40" v-model="interval" :max="100"  :step="30" :markers="true" marker-labels></q-slider>
+        <q-badge id="i9tea" label="Adhesion penalty"></q-badge>
+        <q-slider id="ir45j" :min="0" v-model="adhesion" :max="50"  :step="10" :markers="true" marker-labels></q-slider>
+        <q-badge id="iok9u" label="Volume penalty"></q-badge>
+        <q-slider id="ihqcq" :min="0" v-model="volumePenalty" :max="50"  :step="10" :markers="true" marker-labels></q-slider>
+        <q-badge id="iczux" label="Migration speed"></q-badge>
+        <q-slider id="i0q3j" :min="0" v-model="migration" :max="500"  :step="100" :markers="true" marker-labels></q-slider>
+        <q-btn id="igwgg" color="primary" label="Animate" v-on:click="animate = true" ></q-btn>
+    </div>
+</div>
