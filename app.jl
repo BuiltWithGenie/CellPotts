@@ -44,23 +44,24 @@ Stipple.Layout.add_script("https://cdn.tailwindcss.com")
                 N_cells = cpm.state.cellIDs[end]
                 push!(cells, N_cells)
             end
-            for i in 2:S
-                for j in 2:S
-                    if cpm.space.nodeIDs[i,j] != cpm.space.nodeIDs[i,j-1]
-                        push!(x0, i-1.5)
-                        push!(y0, j-1.5)
-                        push!(x1, i-0.5)
-                        push!(y1, j-1.5)
-                    end
-                    if cpm.space.nodeIDs[i,j] != cpm.space.nodeIDs[i-1,j]
-                        push!(x0, i-1.5)
-                        push!(y0, j-1.5)
-                        push!(x1, i-1.5)
-                        push!(y1, j-0.5)
-                    end
-                end
-            end
-            shapes = PlotlyBase.line(x0,x1,y0,y1; xref="x", yref="y")
+            # this draws cell borders. It is disabled to make the animation faster
+            #= for i in 2:S =#
+            #=     for j in 2:S =#
+            #=         if cpm.space.nodeIDs[i,j] != cpm.space.nodeIDs[i,j-1] =#
+            #=             push!(x0, i-1.5) =#
+            #=             push!(y0, j-1.5) =#
+            #=             push!(x1, i-0.5) =#
+            #=             push!(y1, j-1.5) =#
+            #=         end =#
+            #=         if cpm.space.nodeIDs[i,j] != cpm.space.nodeIDs[i-1,j] =#
+            #=             push!(x0, i-1.5) =#
+            #=             push!(y0, j-1.5) =#
+            #=             push!(x1, i-1.5) =#
+            #=             push!(y1, j-0.5) =#
+            #=         end =#
+            #=     end =#
+            #= end =#
+            #= shapes = PlotlyBase.line(x0,x1,y0,y1; xref="x", yref="y") =#
             #= layout = PlotlyBase.Layout(height=500,width=500,shapes=shapes) =#
             trace = [heatmap(z=cpm.space.nodeIDs', colorscale="picnic", showscale="false")]
             nodeIDs = [vec(row) for row in eachrow( cpm.space.nodeIDs')]
