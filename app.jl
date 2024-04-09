@@ -14,7 +14,7 @@ Stipple.Layout.add_script("https://cdn.tailwindcss.com")
     @out t = 1
     @out N_cells = 1
     @in division = true
-    @in interval = 20
+    @in interval = 40
     @in animate = false
     @out nodeIDs = [[],[]]
     @out trace = [heatmap()]

@@ -2,6 +2,8 @@
 
 Visualization of a Cellular Potts model built on top of the [CellularPotts.jl](https://github.com/RobertGregg/CellularPotts.jl) package.
 
+![screenshot](preview.gif)
+
 ## Installation
 
 Clone the repository and install the dependencies:
