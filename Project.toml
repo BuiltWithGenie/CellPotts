@@ -4,5 +4,9 @@ GenieFramework = "a59fdf5c-6bf0-4f5d-949c-a137c9e2f353"
 CellularPotts = "11b7dee7-cd95-48a5-a457-717aae94d0bd"
 PlotlyJS = "f0f68f2c-4968-5e81-91da-67840de0976a"
 
+[compat]
+GenieFramework = "2"
+julia = "1"
+
 [Genie]
 instantiated_pwd = "/Users/pere/genie/genieawesome/CellPots"
